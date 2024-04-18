@@ -7,7 +7,6 @@ import app.model.Timer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 
 @Configuration
@@ -24,11 +23,9 @@ public class AppConfig {
         return new Dog();
     }
 
-    //
+    // The functionality was added by me
     @Bean(name = "timer")
-    @Scope("singleton")
     public Timer getTimer() {
         return new Timer();
     }
-
 }
